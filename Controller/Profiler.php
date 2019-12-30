@@ -1,9 +1,9 @@
 <?php
 namespace ProfilerPack\Controller;
 
-use Prim\Controller;
+use Prim\AbstractController;
 
-class Profiler extends Controller
+class Profiler extends AbstractController
 {
     public function profile()
     {
