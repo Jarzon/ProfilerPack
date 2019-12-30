@@ -1,5 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 namespace ProfilerPack\Service;
+
+use ProfilerPack\Service\XdebugTraceFileParser;
 
 class Profiler
 {

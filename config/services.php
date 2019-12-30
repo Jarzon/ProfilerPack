@@ -5,12 +5,14 @@ use Prim\Container;
 
 return [
     Profiler::class => function(Container $dic) {
-        $toolbar = $this->getToolbarService();
+        $toolbar = $dic->get('toolbarService');
         $toolbar->addElement('Profiler', function() {
 
             return ' - <a href="/profiler/profile/">Profile</a> - <a href="/profiler/show/">Show</a>';
         });
 
-        return [];
+        return [
+            $dic->get('profilerService')
+        ];
     }
 ];
