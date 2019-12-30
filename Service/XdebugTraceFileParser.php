@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 namespace ProfilerPack\Service;
 
 // This product includes Xdebug, freely available from http://xdebug.org/

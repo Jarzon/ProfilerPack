@@ -2,17 +2,17 @@
 
 use ProfilerPack\Controller\Profiler;
 use Prim\Container;
+use ProfilerPack\Service\Profiler as ProfilerService;
 
 return [
     Profiler::class => function(Container $dic) {
-        $toolbar = $dic->get('toolbarService');
-        $toolbar->addElement('Profiler', function() {
-
-            return ' - <a href="/profiler/profile/">Profile</a> - <a href="/profiler/show/">Show</a>';
-        });
-
         return [
             $dic->get('profilerService')
+        ];
+    },
+    ProfilerService::class => function(Container $dic) {
+        return [
+            $dic->options
         ];
     }
 ];

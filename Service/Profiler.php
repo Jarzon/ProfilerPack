@@ -5,11 +5,11 @@ use ProfilerPack\Service\XdebugTraceFileParser;
 
 class Profiler
 {
-    protected $dir;
+    protected string $dir;
 
-    function __construct($dir)
+    function __construct($options)
     {
-        $this->dir = $dir;
+        $this->dir = $options['app'] . 'cache/';
     }
 
     function startTrace() {
