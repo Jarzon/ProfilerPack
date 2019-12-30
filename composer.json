@@ -7,6 +7,8 @@
   },
   "require": {
     "php": ">=7.4.0",
+    "ext-xdebug": "*",
+
     "jarzon/prim": "~0.16.0"
   }
 }
